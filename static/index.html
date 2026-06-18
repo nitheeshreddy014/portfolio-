@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pocharam Nitheesh Reddy - Software Engineer | Cloud & DevOps | GenAI Developer. Wine & Noir portfolio.">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Pocharam Nitheesh Reddy | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Raleway:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="boot-screen" aria-hidden="true">
+        <div class="boot-inner">
+            <div class="boot-logo"><span class="logo-bracket">&lt;</span>NR<span class="logo-bracket">/&gt;</span></div>
+            <div class="boot-bar"><div class="boot-bar-fill" id="bootBarFill"></div></div>
+            <div class="boot-counter" id="bootCounter">00</div>
+            <div class="boot-label">Loading Portfolio</div>
+        </div>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-label" id="cursorLabel"></div>
+    <button class="sound-toggle" id="soundToggle" aria-label="Toggle UI sound"><i class="fas fa-volume-mute"></i></button>
+
+    <div id="landing-page">
+        <div class="gradient-mesh"></div>
+        <div class="aurora-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="landing-content">
+            <h1 class="landing-hello" id="landingHello"></h1>
+            <p class="landing-subtitle" id="landingSubtitle">You've reached Nitheesh Reddy's corner of the internet.</p>
+            <div class="landing-btn-wrapper" id="landingBtnWrapper">
+                <button id="landing-btn" class="landing-button magnetic">
+                    <span>Step Inside</span> <span class="btn-arrow">&rarr;</span>
+                </button>
+            </div>
+        </div>
+        <div class="burst-container" id="burstContainer" aria-hidden="true"></div>
+    </div>
+
+    <div id="portfolio-main" class="portfolio-hidden">
+        <canvas id="brain-canvas" aria-hidden="true"></canvas>
+        <div class="noise-overlay" aria-hidden="true"></div>
+        <div class="ambient-orbs" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="nav-logo magnetic"><span class="logo-bracket">&lt;</span>NR<span class="logo-bracket">/&gt;</span></a>
+                <button class="nav-toggle magnetic" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="hero" class="hero-section">
+            <div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
+            <div class="hero-ornament top-left" data-speed="0.2"></div>
+            <div class="hero-ornament top-right" data-speed="0.3"></div>
+            <div class="hero-ornament bottom-left" data-speed="0.4"></div>
+            <div class="hero-ornament bottom-right" data-speed="0.5"></div>
+            <div class="hero-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="hero-content" id="heroContent">
+                <h1 class="hero-name" id="heroName" data-name="Pocharam Nitheesh Reddy"></h1>
+                <div class="hero-title-wrapper animate-on-scroll">
+                    <p class="hero-title">Software Engineer <span class="separator">&#9830;</span> Cloud &amp; DevOps <span class="separator">&#9830;</span> GenAI Developer</p>
+                </div>
+                <div class="hero-contact animate-on-scroll">
+                    <a href="tel:+919398161844" class="magnetic"><i class="fas fa-phone"></i> +91 9398161844</a>
+                    <a href="mailto:Nitheeshreddy014@gmail.com" class="magnetic"><i class="fas fa-envelope"></i> Nitheeshreddy014@gmail.com</a>
+                    <span><i class="fas fa-map-marker-alt"></i> Hyderabad, India</span>
+                </div>
+                <div class="hero-socials animate-on-scroll">
+                    <a href="https://github.com/nitheeshreddy014" target="_blank" rel="noopener" class="social-link magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/nitheeshreddy014" target="_blank" rel="noopener" class="social-link magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:Nitheeshreddy014@gmail.com" class="social-link magnetic" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <a href="#about" class="scroll-indicator magnetic">
+                    <span class="scroll-text">Scroll Down</span>
+                    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle">Get To Know</span>
+                <h2 class="section-title" data-split-text>About Me</h2>
+                <svg class="section-underline" viewBox="0 0 200 8" preserveAspectRatio="none"><path d="M0,4 Q100,0 200,4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                <div class="section-divider"><span class="diamond"></span></div>
+            </div>
+            <div class="about-container">
+                <div class="about-stats animate-on-scroll">
+                    <div class="stat-card glass-card"><div class="stat-icon"><i class="fas fa-briefcase"></i></div><span class="stat-number" data-target="1">0</span><span class="stat-plus">+</span><span class="stat-label">Years Experience</span></div>
+                    <div class="stat-card glass-card"><div class="stat-icon"><i class="fas fa-project-diagram"></i></div><span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span><span class="stat-label">Projects</span></div>
+                    <div class="stat-card glass-card"><div class="stat-icon"><i class="fas fa-cogs"></i></div><span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span><span class="stat-label">Technologies</span></div>
+                </div>
+                <div class="about-text animate-on-scroll">
+                    <p>Motivated <span class="highlight">Software Engineer</span> with 1+ year of professional experience in <span class="highlight">cloud infrastructure</span>, <span class="highlight">Infrastructure as Code (IaC)</span>, <span class="highlight">backend development</span>, and <span class="highlight">DevOps practices</span>.</p>
+                    <p>Proficient in designing and automating cloud solutions on <span class="highlight">AWS</span> and <span class="highlight">Azure</span> using <span class="highlight">Terraform</span>. Developed end-to-end Terraform modules for <span class="highlight">AWS Bedrock AgentCore</span> and <span class="highlight">Azure Batch</span> services, and designed <span class="highlight">Disaster Recovery (DR) strategies</span> with defined RTO/RPO targets at <span class="highlight">Optum (UnitedHealth Group)</span>.</p>
+                    <p>Hands-on experience building backend APIs with <span class="highlight">Python</span> and <span class="highlight">FastAPI</span>. Strong foundation in containerization, CI/CD pipelines, and monitoring. Working with <span class="highlight">Generative AI</span>, <span class="highlight">Agentic AI</span>, and <span class="highlight">RAG-based architectures</span>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills-section">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle">What I Know</span>
+                <h2 class="section-title" data-split-text>Technical Skills</h2>
+                <svg class="section-underline" viewBox="0 0 200 8" preserveAspectRatio="none"><path d="M0,4 Q100,0 200,4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                <div class="section-divider"><span class="diamond"></span></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fas fa-cloud"></i><h3>Cloud Platforms</h3></div><div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Azure</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fas fa-code"></i><h3>IaC</h3></div><div class="skill-tags"><span class="skill-tag">Terraform (HCL)</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fab fa-aws"></i><h3>AWS Services</h3></div><div class="skill-tags"><span class="skill-tag">Lambda</span><span class="skill-tag">S3</span><span class="skill-tag">API Gateway</span><span class="skill-tag">Bedrock</span><span class="skill-tag">AgentCore</span><span class="skill-tag">IAM</span><span class="skill-tag">CloudWatch</span><span class="skill-tag">DR Strategies</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fab fa-microsoft"></i><h3>Azure Services</h3></div><div class="skill-tags"><span class="skill-tag">Azure Batch</span><span class="skill-tag">Azure DevOps</span><span class="skill-tag">AKS</span><span class="skill-tag">Virtual Machines</span><span class="skill-tag">Storage</span><span class="skill-tag">Container Instances</span><span class="skill-tag">App Services</span><span class="skill-tag">Virtual Network</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fab fa-docker"></i><h3>Containerization &amp; Orchestration</h3></div><div class="skill-tags"><span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes (AKS)</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fas fa-infinity"></i><h3>CI/CD</h3></div><div class="skill-tags"><span class="skill-tag">GitHub Actions</span><span class="skill-tag">Azure DevOps</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fab fa-python"></i><h3>Programming</h3></div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">FastAPI</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fas fa-database"></i><h3>Databases</h3></div><div class="skill-tags"><span class="skill-tag">MongoDB</span><span class="skill-tag">SQLite</span><span class="skill-tag">PostgreSQL (pgvector)</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fas fa-vial"></i><h3>API Testing</h3></div><div class="skill-tags"><span class="skill-tag">Postman</span><span class="skill-tag">Insomnia</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fas fa-robot"></i><h3>GenAI &amp; Agentic AI</h3></div><div class="skill-tags"><span class="skill-tag">Agentic AI</span><span class="skill-tag">RAG</span><span class="skill-tag">LangChain</span><span class="skill-tag">LangGraph</span><span class="skill-tag">Vector Databases</span><span class="skill-tag">MCP Server</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fab fa-react"></i><h3>Web Technologies</h3></div><div class="skill-tags"><span class="skill-tag">React JS</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fas fa-chart-line"></i><h3>Monitoring</h3></div><div class="skill-tags"><span class="skill-tag">Grafana</span><span class="skill-tag">Prometheus</span></div></div>
+                <div class="skill-category glass-card animate-on-scroll" data-tilt><div class="skill-category-header"><i class="fab fa-git-alt"></i><h3>Version Control</h3></div><div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span></div></div>
+            </div>
+            <div class="marquee animate-on-scroll" aria-hidden="true">
+                <div class="marquee-track" id="marqueeTrack">
+                    <span>AWS</span><span>&#9830;</span><span>Azure</span><span>&#9830;</span><span>Terraform</span><span>&#9830;</span><span>Bedrock AgentCore</span><span>&#9830;</span><span>Python</span><span>&#9830;</span><span>FastAPI</span><span>&#9830;</span><span>Docker</span><span>&#9830;</span><span>Kubernetes</span><span>&#9830;</span><span>GitHub Actions</span><span>&#9830;</span><span>LangChain</span><span>&#9830;</span><span>RAG</span><span>&#9830;</span><span>pgvector</span><span>&#9830;</span><span>MCP Server</span><span>&#9830;</span><span>Grafana</span><span>&#9830;</span><span>Prometheus</span><span>&#9830;</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience-section">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle">Where I've Worked</span>
+                <h2 class="section-title" data-split-text>Experience</h2>
+                <svg class="section-underline" viewBox="0 0 200 8" preserveAspectRatio="none"><path d="M0,4 Q100,0 200,4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                <div class="section-divider"><span class="diamond"></span></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <h3>Software Engineer</h3>
+                            <span class="timeline-company">Persistent Systems Limited <span class="separator">|</span> Client: Optum (UnitedHealth Group)</span>
+                            <span class="timeline-date"><i class="fas fa-calendar-alt"></i> May 2025 &ndash; May 2026 &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Hyderabad, India</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed backend APIs using Python and FastAPI, and performed comprehensive API testing and validation using Postman and Insomnia with MongoDB as the database layer.</li>
+                            <li>Designed and developed end-to-end Terraform modules for AWS Bedrock AgentCore, provisioning services including Lambda functions, S3 buckets, and API Gateway for agent storage and orchestration.</li>
+                            <li>Built a complete Terraform module for Azure Batch service, enabling scalable batch processing workloads for the client's infrastructure.</li>
+                            <li>Automated cloud infrastructure provisioning and management across AWS and Azure using Terraform, ensuring consistency and repeatability across environments.</li>
+                            <li>Worked extensively on Infrastructure as Code (IaC) for diverse AWS and Azure services, reducing manual intervention and improving deployment efficiency.</li>
+                            <li>Implemented CI/CD pipelines using GitHub Actions for automated deployment, testing, and validation of IaC modules across environments.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dr-highlight animate-on-scroll">
+                <div class="dr-highlight-inner glass-card">
+                    <div class="dr-header">
+                        <div class="dr-icon-wrapper"><i class="fas fa-shield-alt"></i></div>
+                        <div class="dr-title-block">
+                            <span class="dr-badge">Key Achievement</span>
+                            <h3>Disaster Recovery Architecture</h3>
+                            <p class="dr-subtitle">AWS Bedrock AgentCore &mdash; Optum (UnitedHealth Group)</p>
+                        </div>
+                    </div>
+                    <p class="dr-description">Designed and implemented comprehensive <span class="highlight">Disaster Recovery (DR) strategies</span> for AWS Bedrock AgentCore resources, ensuring business continuity and high availability across multi-region environments.</p>
+                    <div class="dr-metrics">
+                        <div class="dr-metric-card" data-tilt><div class="dr-metric-icon"><i class="fas fa-clock"></i></div><div class="dr-metric-value">8 hrs</div><div class="dr-metric-label">RTO Target</div><div class="dr-metric-sublabel">Recovery Time Objective</div></div>
+                        <div class="dr-metric-card" data-tilt><div class="dr-metric-icon"><i class="fas fa-database"></i></div><div class="dr-metric-value">0 hrs</div><div class="dr-metric-label">RPO Target</div><div class="dr-metric-sublabel">Recovery Point Objective</div></div>
+                        <div class="dr-metric-card" data-tilt><div class="dr-metric-icon"><i class="fas fa-stopwatch"></i></div><div class="dr-metric-value">72 hrs</div><div class="dr-metric-label">RTO Target</div><div class="dr-metric-sublabel">Extended Recovery Window</div></div>
+                        <div class="dr-metric-card" data-tilt><div class="dr-metric-icon"><i class="fas fa-history"></i></div><div class="dr-metric-value">24 hrs</div><div class="dr-metric-label">RPO Target</div><div class="dr-metric-sublabel">Data Loss Tolerance</div></div>
+                    </div>
+                    <div class="dr-tags">
+                        <span>AWS</span><span>Bedrock AgentCore</span><span>DR Strategy</span><span>High Availability</span><span>Multi-Region</span><span>Business Continuity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle">What I've Built</span>
+                <h2 class="section-title" data-split-text>Projects &amp; Hands-On</h2>
+                <svg class="section-underline" viewBox="0 0 200 8" preserveAspectRatio="none"><path d="M0,4 Q100,0 200,4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                <div class="section-divider"><span class="diamond"></span></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-card animate-on-scroll" data-tilt data-modal data-title="Docker &amp; Kubernetes" data-tags="Docker,Kubernetes,AKS"><div class="project-icon"><i class="fab fa-docker"></i></div><h3>Docker &amp; Kubernetes</h3><p>Configured and managed Docker containers and created Dockerfiles for multi-environment application deployment. Set up and managed Kubernetes (AKS) clusters, authored Manifest files, and configured Persistent Volumes, storage classes, Services, and Ingress for orchestrated deployments.</p><div class="project-tags"><span>Docker</span><span>Kubernetes</span><span>AKS</span></div></div>
+                <div class="project-card glass-card animate-on-scroll" data-tilt data-modal data-title="Azure Web App Deployments" data-tags="Azure,Java,.NET,Web Apps"><div class="project-icon"><i class="fab fa-microsoft"></i></div><h3>Azure Web App Deployments</h3><p>Deployed Java and .NET applications on Azure Web Apps in clustered environments using automated deployment scripts across staging and production.</p><div class="project-tags"><span>Azure</span><span>Java</span><span>.NET</span><span>Web Apps</span></div></div>
+                <div class="project-card glass-card animate-on-scroll" data-tilt data-modal data-title="Monitoring &amp; Alerting" data-tags="Grafana,Prometheus,Monitoring"><div class="project-icon"><i class="fas fa-chart-area"></i></div><h3>Monitoring &amp; Alerting</h3><p>Implemented monitoring and alerting dashboards using Grafana and Prometheus for infrastructure health management and proactive issue detection.</p><div class="project-tags"><span>Grafana</span><span>Prometheus</span><span>Monitoring</span></div></div>
+                <div class="project-card glass-card animate-on-scroll" data-tilt data-modal data-title="Azure DevOps CI/CD" data-tags="Azure DevOps,CI/CD,Pipelines"><div class="project-icon"><i class="fas fa-infinity"></i></div><h3>Azure DevOps CI/CD</h3><p>Built CI/CD pipelines using Azure DevOps for automated build, test, and release workflows for application deployments.</p><div class="project-tags"><span>Azure DevOps</span><span>CI/CD</span><span>Pipelines</span></div></div>
+                <div class="project-card glass-card animate-on-scroll" data-tilt data-modal data-title="Crown &amp; Craft Dental Clinic" data-tags="FastAPI,SQLite,HTML/CSS/JS,Render" data-link="https://github.com/nitheeshreddy014/crown-and-craft-dental"><div class="project-icon"><i class="fas fa-tooth"></i></div><h3>Crown &amp; Craft Dental Clinic</h3><p>Building a full-stack dental clinic website using Python (FastAPI), HTML, CSS, and JavaScript with SQLite database, featuring appointment booking, user authentication, and an admin dashboard. Deployed on Render with GitHub integration.</p><div class="project-tags"><span>FastAPI</span><span>SQLite</span><span>HTML/CSS/JS</span><span>Render</span></div><a href="https://github.com/nitheeshreddy014/crown-and-craft-dental" target="_blank" rel="noopener" class="project-link magnetic"><i class="fab fa-github"></i> View on GitHub</a></div>
+                <div class="project-card glass-card animate-on-scroll" data-tilt data-modal data-title="Agentic AI &ndash; RAG Project" data-tags="LangChain,LangGraph,RAG,pgvector,FastAPI"><div class="project-icon"><i class="fas fa-brain"></i></div><h3>Agentic AI &ndash; RAG Project</h3><p>Developing an Agentic AI project leveraging RAG architecture with LangChain, LangGraph, pgvector (PostgreSQL), and FastAPI to build an intelligent agent capable of context-aware retrieval and response generation.</p><div class="project-tags"><span>LangChain</span><span>LangGraph</span><span>RAG</span><span>pgvector</span><span>FastAPI</span></div></div>
+            </div>
+        </section>
+
+        <section id="exploration" class="section exploration-section">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle">Where I'm Building Now</span>
+                <h2 class="section-title" data-split-text>Active Work</h2>
+                <svg class="section-underline" viewBox="0 0 200 8" preserveAspectRatio="none"><path d="M0,4 Q100,0 200,4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                <div class="section-divider"><span class="diamond"></span></div>
+            </div>
+            <div class="exploration-container">
+                <div class="exploration-card glass-card animate-on-scroll"><div class="exploration-icon"><i class="fas fa-rocket"></i></div><p>Working with <span class="highlight">Generative AI</span> and <span class="highlight">Agentic AI</span> &mdash; including Retrieval Augmented Generation (RAG), LangChain, LangGraph, Vector Databases (pgvector), and MCP Server.</p></div>
+                <div class="exploration-card glass-card animate-on-scroll"><div class="exploration-icon"><i class="fas fa-flask"></i></div><p>Developing end-to-end <span class="highlight">proof-of-concepts</span> integrating LLMs, retrieval pipelines, and intelligent agent architectures.</p></div>
+            </div>
+        </section>
+
+        <section id="education" class="section education-section">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle">My Academic Background</span>
+                <h2 class="section-title" data-split-text>Education</h2>
+                <svg class="section-underline" viewBox="0 0 200 8" preserveAspectRatio="none"><path d="M0,4 Q100,0 200,4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                <div class="section-divider"><span class="diamond"></span></div>
+            </div>
+            <div class="education-card glass-card animate-on-scroll" data-tilt>
+                <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Bachelor of Technology (B.Tech) in Computer Science Engineering</h3>
+                <p class="education-university">Jawaharlal Nehru Technological University Hyderabad</p>
+                <p class="education-college">Bharat Institute of Engineering and Technology</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="section-header animate-on-scroll">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title" data-split-text>Contact Me</h2>
+                <svg class="section-underline" viewBox="0 0 200 8" preserveAspectRatio="none"><path d="M0,4 Q100,0 200,4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                <div class="section-divider"><span class="diamond"></span></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item glass-card" data-tilt><i class="fas fa-phone"></i><div><h4>Phone</h4><a href="tel:+919398161844" class="magnetic">+91 9398161844</a></div></div>
+                    <div class="contact-item glass-card" data-tilt><i class="fas fa-envelope"></i><div><h4>Email</h4><a href="mailto:Nitheeshreddy014@gmail.com" class="magnetic">Nitheeshreddy014@gmail.com</a></div></div>
+                    <div class="contact-item glass-card" data-tilt><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><span>Hyderabad, India</span></div></div>
+                    <div class="contact-item glass-card" data-tilt><i class="fab fa-github"></i><div><h4>GitHub</h4><a href="https://github.com/nitheeshreddy014" target="_blank" rel="noopener" class="magnetic">github.com/nitheeshreddy014</a></div></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo"><span class="logo-bracket">&lt;</span>NR<span class="logo-bracket">/&gt;</span></div>
+                <p>&copy; 2025 Pocharam Nitheesh Reddy. Crafted with passion.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/nitheeshreddy014" target="_blank" rel="noopener" class="magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/nitheeshreddy014" target="_blank" rel="noopener" class="magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:Nitheeshreddy014@gmail.com" class="magnetic" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <button id="backToTop" class="back-to-top magnetic" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    </div>
+
+    <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog">
+        <div class="project-modal-backdrop"></div>
+        <div class="project-modal-content glass-card">
+            <button class="project-modal-close magnetic" id="modalClose" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div class="project-modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+    <script src="js/boot-screen.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/lenis-init.js"></script>
+    <script src="js/split-text.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/tilt.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/marquee.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
